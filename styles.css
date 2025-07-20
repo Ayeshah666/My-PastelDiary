@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Patrick+Hand&display=swap');
+
+:root {
+    --pastel-pink: #ffd6e0;
+    --pastel-purple: #e0d6ff;
+    --pastel-blue: #d6f0ff;
+    --pastel-green: #d6ffea;
+    --pastel-yellow: #fff9d6;
+}
+
+body {
+    font-family: 'Patrick Hand', cursive;
+    background-color: #fafafa;
+}
+
+.title-font {
+    font-family: 'Gochi Hand', cursive;
+}
+
+.diary-paper {
+    background: linear-gradient(to bottom, #fffef9, #fffef9);
+    background-size: 100% 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.diary-paper::before {
+    content: "";
+    position: absolute;
+    left: 40px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: repeating-linear-gradient(to bottom, 
+        transparent, 
+        transparent 28px, 
+        rgba(173, 216, 230, 0.5) 28px, 
+        rgba(173, 216, 230, 0.5) 30px);
+}
+
+.calendar-day {
+    transition: all 0.2s ease;
+}
+
+.calendar-day:hover {
+    transform: scale(1.05);
+}
+
+.calendar-day.has-entry {
+    background-color: var(--pastel-pink);
+}
+
+.mood-emoji-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border: 2px solid #e9d5ff;
+    transition: all 0.2s ease;
+}
+
+.mood-emoji-btn:hover {
+    background: #f3e8ff;
+    border-color: #d8b4fe;
+}
+
+.mood-emoji-btn.selected {
+    background: #e9d5ff;
+    border-color: #c084fc;
+    transform: scale(1.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.lock-screen {
+    backdrop-filter: blur(5px);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
